@@ -1,0 +1,46 @@
+<% include ./partials/header.ejs %>
+
+    <div class="w-full min-h-screen bg-zinc-800 px-10 py-8">
+        <div class="cards flex flex-wrap gap-10 text-white ">
+            <% user.posts.reverse().forEach(function(elem){ %>
+                <div class="card w-auto h-auto bg-amber-400 rounded-lg overflow-hidden text-black px-4 py-3">
+
+                    <h3 class="text-xl font-semibold mt-2">Fullname: <%= elem.name %>
+                    </h3>
+                    <h3 class="text-xl font-semibold mt-2">Email: <%= elem.email%>
+                    </h3>
+                    <h3 class="text-xl font-semibold mt-2">Phone-no: <%= elem.phone %>
+                    </h3>
+
+                    <h3 class="text-xl font-semibold mt-2">Time: <%= elem.btime %>
+                    </h3>
+                    <h3 class="text-xl font-semibold mt-2">Date: <%= elem.bdate %>
+                    </h3>
+                    <h3 class="text-xl font-semibold mt-2">Pick-up Address: <%= elem.paddress %>
+                    </h3>
+                    <h3 class="text-xl font-semibold mt-2">Drop-off Address: <%= elem.daddress %>
+                    </h3>
+
+                    <h3 class="text-xl font-semibold mt-2">Car-Name: <%= elem.carname %>
+                    </h3>
+                    <h3 class="text-xl font-semibold mt-2">Car-model: <%= elem.carmodel %>
+                    </h3>
+                    <h3 class="text-xl font-semibold mt-2">Car-price: $<%= elem.carprice %>/KM
+                    </h3>
+                    <h3 class="text-xl font-semibold mt-2">Passengers: <%= elem.passenger%>
+                    </h3>
+                    <h3 class="text-xl font-semibold mt-2">Luggage: <%= elem.luggage %>
+                    </h3>
+                    <!-- <h3 class="text-xl font-semibold mt-2">booking time: <%= elem.date %>
+                    </h3> -->
+
+                    <a href="/cancle">Cancle</a>
+                    <h3 class="text-xl font-semibold mt-2">Your ride is cancle for  <%= elem.cancle %> reason
+                    </h3>
+                </div>
+                <% }) %>
+
+        </div>
+    </div>
+
+    <% include ./partials/footer.ejs %>

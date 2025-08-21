@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/cab-cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <div class="cab-cart bg-zinc-100"> <!--main-->
+        <div class="w-[1200px] h-auto bg-gray-300 rounded-xl px-6 py-4 cab absolute top-[5%] left-[12%]">
+
+            <div class="items-center w-full h-60 bg-zinc-200 p-2 rounded-2xl">
+                <h2 class="font-semibold text-xl">Ride Booked for:</h2>
+                <h2>Name:<%= user?.posts[((user.posts.length)-1)]?.name %>
+                </h2>
+                <h2>Email: <%= user?.posts[((user.posts.length)-1)]?.email %>
+                </h2>
+                <h2>Phone:<%= user?.posts[((user.posts.length)-1)]?.phone %>
+                </h2>
+                <h2>Pick-up Address:<%= user?.posts[((user.posts.length)-1)]?.paddress %>
+                </h2>
+                <h2>Drop-off Address:<%= user?.posts[((user.posts.length)-1)]?.daddress %>
+                </h2>
+                <h2>Date:<%= user?.posts[((user.posts.length)-1)]?.bdate %>
+                </h2>
+                <h2>Time:<%= user?.posts[((user.posts.length)-1)]?.btime %>
+                </h2>
+            </div>
+
+            <div class="flex items-center w-full h-60 bg-zinc-200 p-2 rounded-2xl bill mt-5">
+                <!-- <div class="w-[200px] h-full rounded-xl bg-red-400 mr-4 overflow-hidden">
+                    <img class="object-cover w-full h-full" src="vector1.jpg" />
+                </div>
+                <div class="w-[500px] h-full p-2">
+                    <ul>
+                        <li><i class="fa-solid fa-truck-fast"></i><strong>Model:</strong> E-Class 2018 model</li>
+                        <li><i class="fa-solid fa-car"></i><strong>Car-no.:</strong> WB-H-1234</li>
+                        <li><i class="fa-solid fa-truck-fast"></i><strong>Basic Rate:</strong> $2.50 per mile</li>
+                        <li><i class="fa-solid fa-person"></i><strong>Passengers:</strong> 4</li>
+                        <li><i class="fa-solid fa-cart-flatbed-suitcase"></i><strong>Luggage:</strong> 2</li>
+                        <li><i class="fa-solid fa-globe"></i><strong>GPS Navigation:</strong> Yes</li>
+                        <li><i class="fa-solid fa-truck-fast"></i><strong>AC:</strong> Yes</li>
+                    </ul>
+                </div> -->
+            </div>
+
+            <!-- <br>
+            <hr style="height: 20px;"><br> -->
+
+            <div class="flex items-center w-full h-60 bg-zinc-200 p-2 rounded-2xl mt-5">
+
+                <div class=" cart-price flex bg-zinc-100 w-full bill1">
+                    <!-- <table class="table-auto border-collapse border border-slate-500 w-full h-16 text-center item-center">
+                    <thead>
+                        <tr>
+                            <th class="border border-slate-800 w-36 h-16">Car</th>
+                            <th class="border border-slate-800 w-36 h-16">Model Name</th>
+                            <th class="border border-slate-800 w-36 h-16">Quantity</th>
+                            <th class="border border-slate-800 w-36 h-16">Price</th>
+                            <th class="border border-slate-800 w-36 h-16">GST</th>
+                            <th class="border border-slate-800 w-36 h-16">Platform fees</th>
+                            <th class="border border-slate-800 w-36 h-16">Total</th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="table-auto">
+                        <tr>
+                            <td class="border border-slate-600 h-14">BMW</td>
+                            <td class="border border-slate-600 h-14">BMW</td>
+                            <td class="border border-slate-600 h-14">BMW</td>
+                            <td class="border border-slate-600 h-14">BMW</td>
+                            <td class="border border-slate-600 h-14">BMW</td>
+                            <td class="border border-slate-600 h-14">BMW</td>
+                            <td class="border border-slate-600 h-14">BMW</td>
+                        </tr>
+                    </tbody>
+                </table> -->
+                </div>
+
+            </div>
+
+            <form action="" method="post" enctype="multipart/form-data" id="bill2">
+                <!-- <input type="number" placeholder="total-price" name="price" value=""> -->
+                <!-- <input href="" class="ml-[1000px] px-6 py-3 bg-amber-400 rounded-xl" type="submit" value="NEXT"> -->
+            </form>
+            <a href="/profile" class="ml-[1000px] px-6 py-3 bg-amber-400 rounded-xl ">NEXT</a>
+        </div>
+    </div>
+
+    <script src="/javascripts/cab-cart.js" async defer></script>
+
+</body>
+
+</html>

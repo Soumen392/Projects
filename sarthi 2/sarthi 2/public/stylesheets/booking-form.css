@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    /* height: 100%; */
+    width: 100%;
+}
+
+#booking-data {
+    position: relative;
+    width: 100%;
+    height: 200%;
+}
+
+#booking-data-1 {
+    position: relative;
+    /* left: 0px; */
+    width: 100%;
+    width: auto;
+    height: auto;
+    padding: 20px 10px 10px 70px;
+}
+
+#booking-data-2 {
+    position: relative;
+    /* background-color: yellowgreen; */
+    width: auto;
+    height: auto;
+    padding: 20px 10px 10px 70px;
+}
+
+.formdesign {
+    position: relative;
+    font-size: 20px;
+}
+
+.formdesign input {
+    width: 380px;
+    height: 70px;
+    padding: 8px 8px 8px 25px;
+    background-color: #c1c1c1;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    font-weight: 400;
+    font-size: 14px;
+}
+.formerror {
+    color: red;
+}
+
+h2{
+    background-color: #ffbf00;
+    padding: 5px 5px 5px 20px;
+    border-radius: 4px;
+    /* font-family: "Gilroy-Regular"; */
+    font-family: "Book Antiqua";
+    font-weight: 500;
+}
+
+fieldset{
+    width: 60%;
+    padding: 10px 10px 10px 20px;
+    border-radius: 12px;
+    border: 2px solid #000000;
+}
+
+legend{
+    font-size: 20px;
+    background-color: #ffbf00;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+::placeholder {
+    color: #000000;
+    font-weight: 500;
+}
+
+.but {
+    width: 380px;
+    height: 70px;
+    border: none;
+    border-radius: 40px;
+    background-color: #ffbf00;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 1s ease-out;
+    cursor: pointer;
+}
+
+.but:hover {
+    background-color: white;
+}
+
+
+/* map part*/
+#map {
+    height: 600px;
+    width: 600px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 2px solid #000000;
+}
+
+.suggestions {
+    position: absolute;
+    width: 380px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* background-color: white; */
+    background-color: rgb(249, 187, 79);
+    /* border: 1px solid #ccc; */
+    z-index: 1000;
+    max-height: 200px;
+    /* overflow-y: auto; */
+    overflow-y: scroll;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+.button {
+    width: 250px;
+    width: auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(249, 187, 79);
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+}

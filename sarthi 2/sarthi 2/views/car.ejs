@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarthi</title>
+    <link rel="stylesheet" href="/stylesheets/car.css">
+    <link rel="stylesheet" href="/stylesheets/inter-page.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <!-- 1st page -->
+    <div id="booking-container">
+        <div id="navigation">
+            <div id="navigation-1">
+                <div id="navigation-1-left">
+                    <a href="#"><i class="fa-solid fa-user"></i> Sign-in</a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i> email@gmail.com</a>
+                </div>
+                <div id="navigation-1-logo">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+                <div id="navigation-1-right">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-solid fa-phone"></i></a>
+                </div>
+            </div>
+
+            <div id="navigation-2">
+
+                <a href="#">HOME</a>
+
+                <div class="booking-dropdown">
+                    <a href="#">PAGES </a>
+                    <div id="dropdown-booking-1">
+                        <a href="#">Taxis' Details</a>
+                        <hr>
+                        <a href="#">Drivers' Details</a>
+                    </div>
+                </div>
+
+                <a href="booking-page.html">BOOK A RIDE</a>
+                <a href="#">ABOUT</a>
+                <div class="booking-dropdown">
+                    <a href="#">BLOG</a>
+                    <div id="dropdown-booking-2">
+                        <a href="#">Passengers' review</a>
+                        <hr>
+                        <a href="#">News & Blog</a>
+                    </div>
+                </div>
+                <a href="#contact">CONTACT</a>
+
+                <div id="navigation-2-mobile">
+                    <a href="#"><i class="fa-solid fa-phone"></i></a>
+                    <a href="#"><span>00000-00000</span></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="booking-text">
+            <h3 style="font-family: gilroy;">Home . </h3>
+            <h1 style="font-family: gilroy;">Book a Ride</h1>
+        </div>
+    </div>
+
+    <div id="booking-data-heading">
+        <div id="circle"></div>
+        <h5 class="font-semibold">Looking for <span style="color: #ffbf00;">TAXI</span> ?</h5>
+        <h1 class="font-bold">Make your <span style="color: #ffbf00;">booking</span></h1>
+        <h5 class="font-normal">Our taxis commit to make your trips unique by best answering your needs.<br>Make yore
+            journey unique</h5>
+    </div>
+    <div id="filter-buttons">
+        <button class="button-value active" data-filter="all">All</button>
+        <button class="button-value " data-filter="Regular">Town-Work</button>
+        <button class="button-value " data-filter="Occasion">Occasion</button>
+        <button class="button-value " data-filter="Family">Family tip & Travel</button>
+        <button class="button-value " data-filter="Business">Business & Luxury</button>
+    </div>
+    <div id="filterable-cards">
+
+        <!-- <div class="card" data-name="Town-Work">
+            <img src="pricing-1-4.png" alt="Yaris 2014 Model">
+            <a href="taxi1.html">
+                <h3>Yaris 2014 Model</h3>
+            </a>
+            <p><b>Price:</b> <span class="right">$4.30</span></p>
+            <p><b>Per Mile/KM:</b> <span class="right">$2.00</span></p>
+            <p><b>Passengers:</b> <span class="right">4</span></p>
+            <button><a href="">Book now</a></button>
+        </div>
+        <div class="card" data-name="Family tip & Travel">
+            <img src="pricing-1-4.png" alt="E Class 2010 Model">
+            <a href="#">
+                <h3>E Class 2010 Model</h3>
+            </a>
+            <p><b>Price:</b> <span class="right">$20.00</span></p>
+            <p><b>Per Mile/KM:</b> <span class="right">$2.00</span></p>
+            <p><b>Passengers</b>: <span class="right">4</span></p>
+            <button><a href="">Book now</a></button>
+        </div>
+        <div class="card" data-name="Business & Luxury">
+            <img src="pricing-1-4.png" alt="M5 2008 Model">
+            <a href="#">
+                <h3>M5 2008 Model</h3>
+            </a>
+            <p><b>Price:</b> <span class="right">$90.30</span></p>
+            <p><b>Per Mile/KM:</b> <span class="right">$2.00</span></p>
+            <p><b>Passengers:</b><span class="right">2</span></p>
+            <button><a href="">Book now</a></button>
+        </div>
+        <div class="card" data-name="Town-Work">
+            <img src="pricing-1-4.png" alt="Yaris 2014 Model">
+            <a href="#">
+                <h3>Bolt EV 2006 Model</h3>
+            </a>
+            <p><b>Price:</b> <span class="right">$4.30</span></p>
+            <p><b>Per Mile/KM:</b> <span class="right">$2.00</span></p>
+            <p><b>Passengers:</b> <span class="right">4</span></p>
+            <button><a href="">Book now</a></button>
+        </div>
+        <div class="card" data-name="Occasion">
+            <img src="pricing-1-4.png" alt="E Class 2010 Model">
+            <a href="#">
+                <h3>S3 2016 Model</h3>
+            </a>
+            <p><b>Price:</b> <span class="right">$20.00</span></p>
+            <p><b>Per Mile/KM:</b> <span class="right">$2.00</span></p>
+            <p><b>Passengers</b>: <span class="right">4</span></p>
+            <button><a href="">Book now</a></button>
+        </div>
+        <div class="card" data-name="Family tip & Travel">
+            <img src="pricing-1-4.png" alt="M5 2008 Model">
+            <a href="#">
+                <h3>M5 2008 Model</h3>
+            </a>
+            <p><b>Price:</b> <span class="right">$4.30</span></p>
+            <p><b>Per Mile/KM:</b> <span class="right">$2.00</span></p>
+            <p><b>Passengers:</b><span class="right">4</span></p>
+            <button><a href="">Book now</a></button>
+        </div> -->
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
+        integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"
+        integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/javascripts/car.js" async defer></script>
+
+    <script>
+        gsap.to("#navigation-2", {
+
+            // height: "100px",
+            // width:"100%",
+            duration: 4,
+            top: "0px",
+            left: "0px",
+            // border:"none",
+            scrollTrigger: {
+                trigger: "#navigation-2",
+                scroller: "body",
+                // markers: true,
+                start: "top -5%",
+                end: "top -5%",
+                scrub: 1
+            }
+        })
+    </script>
+
+</body>
+
+</html>

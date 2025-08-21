@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    /* padding: 10px; */
+    width: 100%;
+    height: 120px;
+    align-items: center;
+    text-align: center;
+    background-color: #302e2e;
+}
+
+.button-value {
+    width: 150px;
+    height: 70px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-weight: 600;
+    background-color: rgb(241, 241, 241);
+    text-transform: uppercase;
+    color: black;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+.button-value:hover {
+    background-color: #ffbf00;
+    color: black;
+}
+
+#filter-buttons .button-value.active {
+    background-color: #ffbf00;
+    color: black;
+}
+
+#filterable-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 20px 20px 20px;
+
+    background-image: url(/images/bg.png);
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.card {
+    border: 1px solid #292929;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-family: "Gilroy-Medium";
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+    margin: 20px;
+
+}
+.ron{
+    width: 140px;
+    height: 90px;
+    background-color: #ffbf00;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 40px;
+    margin: 20px;
+    transition: all 1s ease-in-out;
+
+}
+.card h3 {
+    /* color: #FFD700; */
+    color: black;
+    margin: 16px 0 16px 0;
+}
+.card h3:hover{
+    color: #ffbf00;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card p {
+    text-align: left;
+    margin: 16px 0 16px 0;
+}
+
+.card .right {
+    position: absolute;
+    right: 80px;
+    text-align: right;
+}
+
+.card:hover{
+transform: rotateZ(-15deg);
+transform: rotate3d(5, 0, -15, 20deg); 
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+}
+
+#filterable-cards .card.hide {
+    display: none;
+}
+
+button {
+    width: 140px;
+    height: 60px;
+    background-color: #ffbf00;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 40px;
+    margin: 20px;
+    transition: all 1s ease-in-out;
+}
+
+button:hover {
+    background-color: #ff7b00;
+}
+button a:hover{
+    color: white;
+}
+
+@media (max-width: 600px) {
+    #filterable-cards {
+        justify-content: center;
+    }
+
+    #filterable-cards .card {
+        width: calc(100% / 2 - 10px);
+    }
+}
+
+#booking-data-heading {
+    height: 250px;
+    height: auto;
+    width: 100%;
+    /* background-color: palevioletred; */
+    /* padding: 5px 30px 20px 40px; */
+    padding: 40px 40px 40px 60px;
+    color: #292929;
+}
+
+#circle {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #ffbf00;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+#booking-data-heading h1 {
+    /* color: white; */
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#booking-data-heading h5 {
+    /* color: #ebebeb; */
+    margin-top: 10px;
+    font-size: 20px;
+}

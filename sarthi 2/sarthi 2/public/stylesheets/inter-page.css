@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    /* scroll-behavior: smooth; */
+}
+
+#booking-container {
+    height: 90%;
+    width: 100%;
+    background-image: url(/images/slider-5.jpg);
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+    background-color: rebeccapurple;
+}
+
+/* navigation bar */
+#navigation {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-color: black;
+}
+
+/* navigation bar part 1*/
+
+#navigation-1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80%;
+    height: 100px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px 0px 0px 200px;
+}
+
+#navigation-1-left {
+    display: flex;
+    width: 40%;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+#navigation-1-right {
+    display: flex;
+    width: 30%;
+    justify-content: flex-end;
+    gap: 20px;
+    right: 0px;
+}
+
+#navigation-1-logo img {
+    width: 120px;
+    height: 50px;
+}
+
+#navigation-1 a {
+    text-decoration: none;
+    color: #ffbf00;
+}
+
+#navigation-1 a:hover {
+    color: white;
+}
+
+#navigation-1-left a {
+    text-decoration: none;
+    color: white;
+}
+
+#navigation-1-left i {
+    text-decoration: none;
+    color: #ffbf00;
+}
+
+#navigation-1-left a:hover {
+    color: #ffbf00;
+}
+
+#navigation-1-left i:hover {
+    color: white;
+}
+
+/* navigation bar part 2*/
+
+#navigation-2 {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    /* background-color: black; */
+    background-color: rgba(0, 0, 0);
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 18px;
+    font-family: "Noto Sans";
+    font-weight: 600;
+    border: 0.5px solid white;
+    position: fixed;
+    z-index: 99;
+}
+
+#navigation-2 a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#navigation-2 a:hover {
+    color: #ffbf00;
+}
+
+.booking-dropdown {
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#dropdown-booking-1 {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 280px;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+}
+
+#dropdown-booking-2 {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 890px;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+}
+
+#navigation-2 #dropdown-booking-1 a,
+#dropdown-booking-2 a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    color: white;
+}
+
+.booking-dropdown:hover #dropdown-booking-1 {
+    display: block;
+}
+
+.booking-dropdown:hover #dropdown-booking-2 {
+    display: block;
+}
+
+#booking-text {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    align-items: center;
+    /* display: block; */
+    text-align: center;
+}
+
+#booking-text h3 {
+    color: #ffbf00;
+    font-size: 50px;
+}
+
+#booking-text h1 {
+    color: white;
+    font-size: 80px;
+}
+
+
+/* for scroll bar and scrolling effect */
+
+/* width */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px rgb(0, 0, 0); */
+    background-color: black;
+    /* border-radius: 10px; */
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+    background: #ffbf00;
+    background: linear-gradient(45deg, #fc8803, #ffbf00);
+    /* border-radius: 10px; */
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: #fc8803;
+}
+

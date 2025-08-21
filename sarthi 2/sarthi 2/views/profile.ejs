@@ -1,0 +1,250 @@
+<!-- <% include ./partials/header.ejs %> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Ride</title>
+
+    <link rel="stylesheet" href="/stylesheets/booking-page.css">
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <div class="w-full min-h-screen bg-zinc-200 text-white pt-1">
+        <form id="uplaodform" hidden action="/fileupload" method="post" enctype="multipart/form-data">
+            <input type="file" name="image">
+        </form>
+        <div class="profdets flex flex-col items-center mt-20">
+            <div class="relative">
+                <span id="uploadicon"
+                    class="w-10 h-10 absolute bottom-0 right-0 rounded-full flex items-center justify-center bg-zinc-800">
+                    <i class="text-zinc-200 ri-pencil-fill"></i>
+                </span>
+                <div class="w-32 h-32 bg-zinc-200 rounded-full overflow-hidden border-solid border-zinc-950 border-2">
+                    <img class="w-full h-full object-cover" src="/images/uploads/<%= user.profileImage %>" alt="profile">
+                </div>
+            </div>
+            <h1 class="text-black text-3xl font-semibold mt-4">
+                <%= user.username%>
+            </h1>
+            <h3 class="text-black text-md mb-4">@<%= user.username%>
+            </h3>
+            <a href="/edit" class="px-7  py-3 bg-zinc-700 rounded-full text-xs font-semibold ">Edit</a>
+            <a href="/car" class="px-10 py-3 rounded-lg bg-orange-400 mt-4 mb-2">Book a Ride</a>
+        </div>
+
+        <div class="flex flex-wrap gap-10 mt-2 px-10">
+            <div class="w-[400px] h-[300px] bg-zinc-400 rounded-lg overflow-hidden text-black px-4 py-3">
+                <h3 class="text-xl font-semibold mt-2">Fullname: <%= user.fullname %>
+                </h3>
+                <h3 class="text-xl font-semibold mt-2">Username: <%= user.username%>
+                </h3>
+                <h3 class="text-xl font-semibold mt-2">Email: <%= user.email%>
+                </h3>
+                <h3 class="text-xl font-semibold mt-2">Phone-no: <%= user.contact %>
+                </h3>
+                <h3 class="text-xl font-semibold mt-2">Address: <%= user.address %>
+                </h3>
+            </div>
+        </div>
+
+        <div class="w-56 h-36 mt-2 px-10 bg-zinc-400 px-10 rounded-xl mx-10 text-black">
+            <a href="/show/bookings" class="inline-block text-xl font-semibold mt-2">Your Booked Rides</a>
+            <h5 class="text-sm font-semibold mt-2">
+                <%= user.posts.length %> Rides
+            </h5>
+        </div>
+        <div class="w-56 h-36 mt-2 px-10 bg-zinc-400 px-10 rounded-xl mx-10 text-black">
+            <a href="/show/bookings" class="inline-block text-xl font-semibold mt-2">Your cancle Rides</a>
+            <h5 class="text-sm font-semibold mt-2">
+                <%= (user?.posts[0]?.cancle) %> 
+            </h5>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
+        integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"
+        integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        document.querySelector('#uploadicon').addEventListener("click", function () {
+            document.querySelector('#uplaodform input').click();
+        })
+        document.querySelector('#uplaodform input').addEventListener("change", function () {
+            document.querySelector('#uplaodform').submit();
+        })
+
+        gsap.to("#navigation-2", {
+            duration: 4,
+            top: "0px",
+            left: "0px",
+            border: "none",
+            scrollTrigger: {
+                trigger: "#navigation-2",
+                scroller: "body",
+                // markers: true,
+                start: "top -5%",
+                end: "top -5%",
+                scrub: 1
+            }
+        })
+    </script>
+
+</body>
+
+</html> -->
+<!-- <% include ./partials/footer.ejs %> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <div class="profile ">
+        <div class="profile-11 w-full h-36 absolute top-[0%] px-56 py-4">
+            <h1 class="text-white text-6xl mt-2" style="font-family: Romany Serif;">Hello, <span style="color: #ffbf00 ;"><%= user.username%></span></h1>
+            <h3 class="text-white text-2xl" style="font-family: Gilroy-Medium;">Welcome to <b style="color: #ffbf00 ;">Sarthi 👋🏻</b></h3>
+        </div>
+
+        <div id="hamberg" >
+            <img src="/images/logo.png" alt="logo" width="140px" height="70px">
+            <ul>
+                <li class="flex">
+                    <div class="w-10 h-10 bg-zinc-100 flex rounded-full overflow-hidden">
+                        <img class="w-full h-full object-cover" src="/images/uploads/<%= user.profileImage %>" alt="">
+           
+                    </div><h3 class="text-black text-md mb-2">@<%= user.username%>
+                    </h3>
+                </li>
+                <li><i class="fa-solid fa-house"></i> <a href="">HOME</a></li>
+                <li><i class="fa-solid fa-circle-info"></i> <a href="">ABOUT</a></li>
+                <li><i class="fa-solid fa-folder-open"></i> <a href="">PAGES</a></li>
+                <li><i class="fa-brands fa-blogger-b"></i> <a href="">BLOG</a></li>
+                <li><i class="fa-solid fa-headset"></i> <a href="">HELP</a></li>
+                <li><i class="fa-solid fa-phone"></i> <a href="">CONTACT</a></li>
+            </ul>
+            <div id="hamberg-down">
+                <ul>
+                    <li class="px-10 py-3 text-center rounded-2xl text-base font-semibold bg-amber-400"><a href="/car">Book
+                            a Ride</a></li>
+                    <li
+                        class="px-10 py-3 text-center rounded-2xl text-base font-semibold bg-zinc-800 text-white mt-5 mb-5">
+                        <a href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class=" w-full h-full absolute top-36">
+            <div class="w-auto h-auto absolute left-[15%] drop-shadow-lg flex justify-items-center items-center gap-10 py-3">
+
+                <div class="profile-1 w-[430px] h-[400px] drop-shadow-lg mt-3 p-3 rounded-xl">
+                    <form id="uplaodform" hidden action="/fileupload" method="post" enctype="multipart/form-data">
+                        <input type="file" name="image">
+                    </form>
+
+                    <div class="flex flex-col items-center">
+                        <div class="absolute">
+                            <span id="uploadicon"
+                                class="w-10 h-10 absolute bottom-0 right-0 rounded-full flex items-center justify-center bg-zinc-800">
+                                <i class="fa-solid fa-pen text-white"></i>
+                            </span>
+                            <div class="w-32 h-32 bg-zinc-100 rounded-full overflow-hidden">
+                                <img class="w-full h-full object-cover" src="/images/uploads/<%= user.profileImage %>"
+                                    alt="">
+                            </div>
+                        </div>
+
+                        <div class="absolute top-[30%] flex flex-col items-center mt-5">
+                            <h1 class="text-black text-3xl font-semibold mt-4">
+                                <%= user.username%>
+                            </h1>
+                            <h3 class="text-black text-md mb-4">@<%= user.username%>
+                            </h3>
+                            <a href="/edit"
+                                class="px-7 py-3 bg-zinc-800 rounded-2xl text-white text-base mt-3 font-semibold ">Update
+                                profile</a>
+                            <a href="/otp"
+                                class="px-10 py-3 rounded-2xl bg-amber-400 text-base font-semibold mt-4 mb-2">Book aa
+                                Ride</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-1 w-[600px] h-[400px]  rounded-xl mt-3 px-5 py-3">
+                    <h3 class="text-xl font-semibold mt-2">Fullname: <%= user.fullname %>
+                    </h3>
+                    <h3 class="text-xl font-semibold mt-2">Username: <%= user.username%>
+                    </h3>
+                    <h3 class="text-xl font-semibold mt-2">Email: <%= user.email%>
+                    </h3>
+                    <h3 class="text-xl font-semibold mt-2">Phone-no: <%= user.contact %>
+                    </h3>
+                    <h3 class="text-xl font-semibold mt-2">Address: <%= user.address %>
+                    </h3>
+                </div>
+
+            </div>
+
+            <div
+                class=" w-auto h-auto rounded-xl absolute top-[450px] left-[15%] flex flex-wrap gap-12 justify-center items-center py-2">
+                <div class="profile-1 w-80 h-40  rounded-xl px-5 py-3">
+                    <a href="/show/bookings" class="inline-block text-xl font-semibold mt-2">Your Booked Rides</a>
+                    <h5 class="text-sm font-semibold mt-2">
+                        <%= user.posts.length %> Rides
+                    </h5>
+                </div>
+                <div class="profile-1 w-80 h-40  rounded-xl px-5 py-3">
+                    <a href="/show/bookings" class="inline-block text-xl font-semibold mt-2">Your cancle Rides</a>
+                    <h5 class="text-sm font-semibold mt-2">
+                        <%= (user?.posts[0]?.cancle) %> 
+                    </h5>
+                </div>
+                <div class="profile-1 w-80 h-40  rounded-xl px-5 py-3"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- <script src="abc.js" async defer></script> -->
+    <script>
+        document.querySelector('#uploadicon').addEventListener("click", function () {
+            document.querySelector('#uplaodform input').click();
+        })
+        document.querySelector('#uplaodform input').addEventListener("change", function () {
+            document.querySelector('#uplaodform').submit();
+        })
+    </script>
+</body>
+
+</html>

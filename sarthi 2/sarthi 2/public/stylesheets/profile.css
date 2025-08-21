@@ -1,0 +1,134 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.profile {
+    height: 100%;
+    width: 100%;
+    background: url(/images/asdf.jpg);
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+}
+
+#hamberg {
+    position: absolute;
+    left: 10px;
+    width: 200px;
+    height: 94%;
+    margin: 10px;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 18px;
+
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+
+}
+
+#hamberg img {
+    margin: 10px 0 20px 0;
+}
+
+#hamberg li {
+    list-style: none;
+    margin: 10px;
+}
+
+#hamberg a {
+    text-decoration: none;
+}
+
+#hamberg i {
+    margin-right: 10px;
+}
+
+#hamberg-down {
+    position: absolute;
+    bottom: 0px;
+}
+
+.profile-1 {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.profile {
+    width: 100%;
+    height: auto;
+}
+.profile-11{
+    background: url(/images/slider-5.jpg);
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0 0 20px 0;
+}
+
+#hamberg {
+    position: absolute;
+    width: 200px;
+    height: 120%;
+    border-radius: 0 20px 20px 0;
+    padding: 10px;
+    font-size: 18px;
+    background-color: rgb(122, 121, 121);
+    z-index: 1;
+}
+
+#hamberg img {
+    margin: 10px 0 20px 0;
+}
+
+#hamberg li {
+    list-style: none;
+    margin: 10px;
+}
+
+#hamberg a {
+    text-decoration: none;
+}
+
+#hamberg i {
+    margin-right: 10px;
+}
+
+#hamberg-down {
+    position: absolute;
+    bottom: 0px;
+}
+
+.profile-1 {
+    border: 1px solid rgba(221, 221, 221, 0.8);
+    box-shadow: 4px 6px 14px 0 rgb(171, 171, 171);
+}
