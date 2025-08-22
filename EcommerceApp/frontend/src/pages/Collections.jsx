@@ -35,6 +35,10 @@ const Collections = () => {
       productsCopy = productsCopy.filter(item => category.includes(item.category))
     }
 
+    if(showSearch && search){
+      productsCopy = productsCopy.filter(item=> item.name.toLowerCase().includes(search.toLowerCase()))
+    }
+
     if(subCategory.length > 0){
       productsCopy = productsCopy.filter(item => subCategory.includes(item.subCategory))
     }
@@ -64,7 +68,7 @@ const Collections = () => {
   useEffect(()=>{
     applyFilter();
     
-  },[subCategory,category])
+  },[subCategory,category,search,showSearch])
 
   useEffect(()=>{
     setFilterProducts(products)
