@@ -75,7 +75,7 @@ const Collections = () => {
   },[products])
 
   return (
-    <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
+    <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t border-gray-300'>
       {/* Filter Options */}
       <div className='min-w-60'>
         <p onClick={()=>setShowFilter(!showFilter)} className='my-2 select-none text-xl flex items-center cursor-pointer gap-2'>FILTERS
