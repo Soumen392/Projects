@@ -1,5 +1,5 @@
 import userModel from "../models/userModel.js";
-import bycript from 'bcrypt'
+import bcript from 'bcrypt'
 import validator from 'validator';
 import jwt from 'jsonwebtoken'
 
@@ -16,7 +16,7 @@ const loginUser = async(req,res) =>{
             return  res.json({success: false, message: "User doesn't exists"})
         }
 
-        const isMatch = await bycript.compare(password,user.password)
+        const isMatch = await bcript.compare(password,user.password)
 
         if (isMatch) {
             const token = createToken(user._id)
@@ -53,8 +53,8 @@ const registerUser = async(req,res)=>{
         }
 
         // hashing user password
-        const salt = await bycript.genSalt(10)
-        const hashedPassword = await bycript.hash(password,salt)
+        const salt = await bcript.genSalt(10)
+        const hashedPassword = await bcript.hash(password,salt)
 
         const newUser = new userModel({
             name,
@@ -74,7 +74,19 @@ const registerUser = async(req,res)=>{
 
 //Route for admin Login
 const adminLogin = async(req,res) =>{
-
+    try {
+        const{email,password} = req.body
+        if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
+            const token = jwt.sign(email+password,process.env.JWT_SECRET)
+            res.json({success:true,token})
+        }
+        else{
+            res.json({success:false,message:"Invalid Credentials"})
+        }
+    } catch (error) {
+        console.log(error);
+        res.json({success:false,message:error.message})
+    }
 }
 
 export {loginUser,registerUser,adminLogin}
