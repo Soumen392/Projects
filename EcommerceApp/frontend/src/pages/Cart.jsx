@@ -9,27 +9,31 @@ const Cart = () => {
   const{products,currency,cartItems,updateQuantity,navigate} = useContext(ShopContext)
   const [cartData, setCartData] = useState([])
   useEffect(() => {
-      const tempData = [];
-      for(const items in cartItems){
-        
-        // console.log(items);
-        
-        for(const item in cartItems[items]){
-          // console.log(item);
-          // console.log(cartItems[items][item]);
+
+      if (products.length > 0) {
+        const tempData = [];
+        for(const items in cartItems){
           
-          if (cartItems[items][item] > 0) {
-            tempData.push({
-              _id:items,
-              size: item,
-              quantity : cartItems[items][item]
-            })
+          // console.log(items);
+          
+          for(const item in cartItems[items]){
+            // console.log(item);
+            // console.log(cartItems[items][item]);
+            
+            if (cartItems[items][item] > 0) {
+              tempData.push({
+                _id:items,
+                size: item,
+                quantity : cartItems[items][item]
+              })
+            }
+            
           }
-          
         }
+        setCartData(tempData);
       }
-      setCartData(tempData);
-  }, [cartItems])
+
+  }, [cartItems,products])
 
   return (
     <div className='border-t pt-14 border-gray-400 '>

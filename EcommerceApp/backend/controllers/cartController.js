@@ -7,9 +7,9 @@ const addToCart = async(req,res) =>{
     try {
         const { userId, itemId, size} = req.body
         const userData = await userModel.findById(userId)
-        let cartData = await userData.cartData;
+        let cartData = await userData.cartDataProperty;
 
-        if (CartData[itemId]) {
+        if (cartData[itemId]) {
             if (cartData [itemId][size]){
 
                 cartData[itemId] [size] += 1
@@ -24,7 +24,7 @@ const addToCart = async(req,res) =>{
             cartData[itemId][size] = 1
         }
         
-        await userModel.findByIdAndUpdate(userId,{cartData})
+        await userModel.findByIdAndUpdate(userId,{ $set: { cartDataProperty: cartData } },{ new: true })
 
         res.json({success:true,message:"Added To Cart"})
         
@@ -37,13 +37,40 @@ const addToCart = async(req,res) =>{
 //Update user cart
 
 const updateUserCart = async(req,res) =>{
+    try {
+        const{userId,itemId,size,quantity} = req.body
 
+        const userData = await userModel.findById(userId)
+        let cartData = await userData.cartDataProperty
+
+        cartData[itemId][size] = quantity;
+
+        await userModel.findByIdAndUpdate(userId,{ $set: { cartDataProperty: cartData } },{ new: true })
+
+        res.json({success:true,message:"Cart Updated"})
+
+    } catch (error) {
+        console.log(error)
+        res.json({success:false,message:error.message})
+    }
 }
 
 //Get data from user cart
 
 const getUserCart = async(req,res) =>{
+    try {
+        const {userId} = req.body;
 
+        const userData = await userModel.findById(userId)
+        let cartData = await userData.cartDataProperty
+
+        res.json({success:true,cartData})
+
+
+    } catch (error) {
+        console.log(error)
+        res.json({success:false,message:error.message})
+    }
 }
 
 export {getUserCart,updateUserCart,addToCart}
