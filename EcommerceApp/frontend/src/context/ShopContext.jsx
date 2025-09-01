@@ -66,6 +66,39 @@ const ShopContextProvider = (props) => {
         return totalCount; 
     };
 
+    const fetchUserProfile = async () => {
+    if (!token) return null;
+    try {
+        const response = await axios.get(backendUrl + '/api/user/profile', {
+            headers: { Authorization: `Bearer ${token}` }
+        });
+        if (response.data.success) {
+            return response.data.user;
+        }
+    } catch (error) {
+            console.error(error);
+            toast.error('Failed to fetch profile');
+        }
+        return null;
+    };
+
+    const updateUserProfile = async (userData) => {
+    if (!token) return null;
+    try {
+        const response = await axios.put(backendUrl + '/api/user/profile', userData, {
+            headers: { Authorization: `Bearer ${token}` }
+        });
+        if (response.data.success) {
+            toast.success('Profile updated');
+            return response.data.user;
+        }
+    } catch (error) {
+            console.error(error);
+            toast.error('Failed to update profile');
+        }
+        return null;
+    };
+
     const updateQuantity = async (itemId,size,quantity) =>{
         let cartData = structuredClone(cartItems);
 
@@ -161,7 +194,10 @@ const ShopContextProvider = (props) => {
         getCartAmount,
         navigate,
         backendUrl,
-        token,setToken
+        token,setToken,
+        updateUserProfile,
+        fetchUserProfile
+
     };
 
 

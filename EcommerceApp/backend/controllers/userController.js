@@ -88,5 +88,41 @@ const adminLogin = async(req,res) =>{
         res.json({success:false,message:error.message})
     }
 }
+//get user
+const getUserProfile = async (req, res) => {
+    try {
+        // req.user aayega userAuth middleware se
+        res.json({ success: true, user: req.user });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ success: false, message: error.message });
+    }
+}
 
-export {loginUser,registerUser,adminLogin}
+// update user
+const updateUserProfile = async (req, res) => {
+    try {
+        const { name, email, password } = req.body;
+        const user = await userModel.findById(req.user._id);
+
+        if (!user) return res.status(404).json({ success: false, message: 'User not found' });
+
+        if (name) user.name = name;
+        if (email) user.email = email;
+
+        if (password && password.length >= 8) {
+            const salt = await bcrypt.genSalt(10);
+            user.password = await bcrypt.hash(password, salt);
+        }
+
+        const updatedUser = await user.save();
+        res.json({ success: true, message: 'Profile updated', user: await userModel.findById(user._id).select('-password') });
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ success: false, message: error.message });
+    }
+}
+
+
+export {loginUser,registerUser,adminLogin,updateUserProfile,getUserProfile}
